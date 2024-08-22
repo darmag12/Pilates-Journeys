@@ -19,6 +19,7 @@
 /* Default Styles */
 body,
 html {
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -26,7 +27,6 @@ body {
     background-color: var(--light-primary-color);
     font-size: 62.5%;
     line-height: 1.6;
-    overflow-x: hidden;
     font-family: Poppins, sans-serif;
 }
 
@@ -180,7 +180,8 @@ p {
     background: linear-gradient(to bottom, #ddcfa7, #9c67697f, #252831e2 100%),
     url('../resources/image00015.jpeg') no-repeat;
     background-size: cover;
-    /* background-position: left bottom; */
+    object-fit: fill;
+    background-position: left bottom;
     overflow: hidden;
 }
 
@@ -536,16 +537,15 @@ p {
 .about {
     display: grid;
     justify-items: center;
+    justify-content: center;
     padding-top: var(--padding-60);
     width: 100%;
 }
 
 .about .about__content {
     display: grid;
-    /* grid-template-rows: 100%; */
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    justify-items: stretch;
     padding-top: var(--padding-60);
 }
 
@@ -553,13 +553,16 @@ p {
     .about .about__content {
         grid-template-columns: 100%;
     }
-  }
-
-.about .about__content div{
-    padding: var(--padding-35);
 }
 
+.about .about__content .about__text{
+    width: 100%;
+    padding: 0 var(--padding-35);
+}
 
+.about .about__content .about__img img{
+    width: 100%;
+}
 
 
 /* Key Frames Animations */
