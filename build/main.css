@@ -240,7 +240,7 @@ p {
 }
 
 .logo svg {
-    animation: logo-fill-animation 1.8s ease forwards 5.4s;
+    animation: logo-fill-animation 1.8s ease forwards 5.4s !important;
   }
 
 .logo svg path:nth-child(1) {
@@ -583,6 +583,6 @@ p {
     }
 
     to {
-        fill: var(--secondary-color) !important;
+        fill: var(--secondary-color);
     }
 }
