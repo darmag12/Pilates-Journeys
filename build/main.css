@@ -37,7 +37,11 @@ a:active,a:visited {
     cursor: pointer;
     font-size: var(--font-size-1-1rem);
 }
-
+h2{
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    margin: 40px 0;
+}
 h3 {
     font-size: var(--font-size-1-3rem);
 }
@@ -173,12 +177,12 @@ p {
     height: auto;
     position: relative;
     z-index: 9;
-    overflow: hidden;
     background: 
     linear-gradient(to bottom, #ddcfa7, #9c67697f, #252831e2 100%),
     url('../resources/image00015.jpeg') no-repeat;
     background-size: cover;
     background-position: left bottom;
+    overflow: hidden;
 }
 
 /*  Media query header Only applies height: 100vh to devices longer than 750px */
@@ -529,6 +533,32 @@ p {
 
 /* ============***End of nav styles***============ */
 
+/* ============***Beginning of About Section styles***============ */
+.about {
+    display: grid;
+    justify-items: center;
+    padding-top: var(--padding-60);
+    width: 100%;
+}
+
+.about .about__content {
+    display: grid;
+    /* grid-template-rows: 100%; */
+    grid-template-columns: repeat(2, 50%);
+    align-items: center;
+    justify-items: stretch;
+    padding-top: var(--padding-60);
+}
+
+@media screen and (max-width: 1164px) {
+    .about .about__content {
+        grid-template-columns: 100%;
+    }
+  }
+
+.about .about__content div{
+    padding: var(--padding-35);
+}
 
 
 
