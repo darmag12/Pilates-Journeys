@@ -1,0 +1,203 @@
+:root {
+    box-sizing: border-box;
+    --primary-color: #fff4f0;
+    --light-primary-color: #fef8f6;
+    --secondary-color: #9c6769;
+    --tertiary-color: #252831;
+    --dark-text-color: #0b0c10;
+    --light-text-color: #303030;
+    --padding-60: 60px;
+    --padding-35: 35px;
+  }
+  body,
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--light-primary-color);
+    font-size: 62.5%;
+    line-height: 1.6;
+    overflow-x: hidden;
+    font-family: Poppins, sans-serif;
+  }
+/* Logo Styles Begin */
+  #logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: logo-fill-animation 1.8s ease forwards 5.4s;
+  }
+
+  #logo path:nth-child(1) {
+    /* Dot two */
+    stroke-dasharray: 37px;
+    stroke-dashoffset: 37px;
+    animation: logo-animation 2s ease forwards 3.2s;
+  }
+  #logo path:nth-child(2) {
+    /* Dot one */
+    stroke-dasharray: 37px;
+    stroke-dashoffset: 37px;
+    animation: logo-animation 2s ease forwards 3.4s;
+  }
+  #logo path:nth-child(3) {
+    stroke-dasharray: 1366px;
+    stroke-dashoffset: 1366px;
+    animation: logo-animation 2.2s ease forwards 3.8s;
+  }
+  #logo path:nth-child(4) {
+    /* San Diego - O */
+    stroke-dasharray: 81px;
+    stroke-dashoffset: 81px;
+    animation: logo-animation 2s ease forwards 4.1s;
+  }
+  #logo path:nth-child(5) {
+    /* San Diego - G */
+    stroke-dasharray: 89px;
+    stroke-dashoffset: 89px;
+    animation: logo-animation 2s ease forwards 4s;
+  }
+  #logo path:nth-child(6) {
+    /* San Diego - E */
+    stroke-dasharray: 77px;
+    stroke-dashoffset: 77px;
+    animation: logo-animation 2s ease forwards 3.9s;
+  }
+  #logo path:nth-child(7) {
+    /* San Diego - I */
+    stroke-dasharray: 34px;
+    stroke-dashoffset: 34px;
+    animation: logo-animation 2s ease forwards 3.8s;
+  }
+  #logo path:nth-child(8) {
+    /* San Diego - D */
+    stroke-dasharray: 85px;
+    stroke-dashoffset: 85px;
+    animation: logo-animation 2s ease forwards 3.7s;
+  }
+  #logo path:nth-child(9) {
+    /* San Diego - N */
+    stroke-dasharray: 87px;
+    stroke-dashoffset: 87px;
+    animation: logo-animation 2s ease forwards 3.6s;
+  }
+  #logo path:nth-child(10) {
+    /* San Diego - A */
+    stroke-dasharray: 76px;
+    stroke-dashoffset: 76px;
+    animation: logo-animation 2s ease forwards 3.5s;
+  }
+  #logo path:nth-child(11) {
+    /* San Diego - S */
+    stroke-dasharray: 67px;
+    stroke-dashoffset: 67px;
+    animation: logo-animation 2s ease forwards 3.42s;
+  }
+  #logo path:nth-child(12) {
+    /* Journey - S */
+    stroke-dasharray: 172px;
+    stroke-dashoffset: 172px;
+    animation: logo-animation 2s ease forwards 3s;
+  }
+  #logo path:nth-child(13) {
+    /* Journey - Y */
+    stroke-dasharray: 152px;
+    stroke-dashoffset: 152px;
+    animation: logo-animation 2s ease forwards 2.8s;
+  }
+  #logo path:nth-child(14) {
+    /* Journey - E */
+    stroke-dasharray: 193px;
+    stroke-dashoffset: 193px;
+    animation: logo-animation 2s ease forwards 2.6s;
+  }
+  #logo path:nth-child(15) {
+    /* Journey - N */
+    stroke-dasharray: 241px;
+    stroke-dashoffset: 241px;
+    animation: logo-animation 2s ease forwards 2.4s;
+  }
+  #logo path:nth-child(16) {
+    /* Journey - R */
+    stroke-dasharray: 223px;
+    stroke-dashoffset: 223px;
+    animation: logo-animation 2s ease forwards 2.2s;
+  }
+  #logo path:nth-child(17) {
+    /* Journey - U */
+    stroke-dasharray: 199px;
+    stroke-dashoffset: 199px;
+    animation: logo-animation 2s ease forwards 2s;
+  }
+  #logo path:nth-child(18) {
+    /* Journey - O */
+    stroke-dasharray: 208px;
+    stroke-dashoffset: 208px;
+    animation: logo-animation 2s ease forwards 1.8s;
+  }
+  #logo path:nth-child(19) {
+    /* Journey - J */
+    stroke-dasharray: 125px;
+    stroke-dashoffset: 125px;
+    animation: logo-animation 2s ease forwards 1.6s;
+  }
+  #logo path:nth-child(20) {
+    /* Pilates - E */
+    stroke-dasharray: 193px;
+    stroke-dashoffset: 193px;
+    animation: logo-animation 2s ease forwards 1.2s;
+  }
+  #logo path:nth-child(21) {
+    /* Pilates - T */
+    stroke-dasharray: 139px;
+    stroke-dashoffset: 139px;
+    animation: logo-animation 2s ease forwards 1s;
+  }
+  #logo path:nth-child(22) {
+    /* Pilates - A */
+    stroke-dasharray: 198px;
+    stroke-dashoffset: 198px;
+    animation: logo-animation 2s ease forwards .8s;
+  }
+  #logo path:nth-child(23) {
+    /* Pilates - L */
+    stroke-dasharray: 128px;
+    stroke-dashoffset: 128px;
+    animation: logo-animation 2s ease forwards .6s;
+  }
+  #logo path:nth-child(24) {
+    /* Pilates - I */
+    stroke-dasharray: 98px;
+    stroke-dashoffset: 98px;
+    animation: logo-animation 2s ease forwards .2s;
+  }
+  #logo path:nth-child(25) {
+    /* Pilates - P */
+    stroke-dasharray: 168.01px;
+    stroke-dashoffset: 168.01px;
+    animation: logo-animation 2s ease forwards;
+  }
+  #logo path:nth-child(26) {
+    /* Pilates - S */
+    stroke-dasharray: 172px;
+    stroke-dashoffset: 172px;
+    animation: logo-animation 2s ease forwards 1.4s;
+  }
+  /* Logo Styles End */
+
+  /* Key Frames Animations */
+  @keyframes logo-animation {
+    to {
+        stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes logo-fill-animation {
+    from {
+        fill: transparent;
+    }
+    to {
+        fill: var(--secondary-color);
+    }
+  }
