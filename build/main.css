@@ -37,6 +37,11 @@ a:active {
     cursor: pointer;
     font-size: var(--font-size-1-1rem);
 }
+a.prevent-default-style-logo:active,a.prevent-default-style-logo:visited{
+    text-decoration: none;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
 h2{
     font-size: 2.4rem;
     text-transform: uppercase;
@@ -578,6 +583,6 @@ p {
     }
 
     to {
-        fill: var(--secondary-color);
+        fill: var(--secondary-color) !important;
     }
 }
