@@ -31,7 +31,7 @@ body {
 }
 
 a,
-a:active,a:visited {
+a:active {
     text-decoration: none;
     color: var(--light-text-color);
     cursor: pointer;
