@@ -761,6 +761,90 @@ p {
 
 /* ============***End of Blog styles***============ */
 
+/* ============***Beginning of Contact Section styles***============ */
+.contact {
+    color: var(--light-text-color);
+    padding-bottom: var(--padding-60);
+}
+
+.contact .contact__container {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(2, 50%);
+    font-size: 1.2rem;
+    justify-items: center;
+
+}
+
+@media screen and (max-width: 700px) {
+    .contact .contact__container {
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr;
+        grid-row-gap: 30px;
+    }
+  }
+
+.contact__phone, .contact__address, .contact__email {
+    padding: var(--padding-35) 0;
+}
+
+.contact__icons {
+    display: inline-block;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.contact__icons i{
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+/* removes blue border from map */
+.gm-style iframe + div { border:none!important; }
+
+/* HTML marker styles */
+.price-tag {
+    background-color: #293946;
+    border-radius: 8px;
+    color: var(--primary-color);
+    font-size: .9rem;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    position: relative;
+  }
+  
+  .price-tag::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 0);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #293946;
+  }
+
+@media screen and (min-width: 1300px) {
+    #map {
+        height: 100%;
+        width: 130%;
+    }
+  }
+/* ============***End of Contact styles***============ */
 /* Key Frames Animations */
 @keyframes logo-animation {
     to {
