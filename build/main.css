@@ -841,7 +841,7 @@ p {
 @media screen and (min-width: 1300px) {
     #map {
         height: 100%;
-        width: 130%;
+        width: 100%;
     }
   }
 /* ============***End of Contact styles***============ */
