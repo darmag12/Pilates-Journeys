@@ -8,6 +8,7 @@
     --light-text-color: #303030;
     --padding-60: 60px;
     --padding-35: 35px;
+    --padding-30: 30px;
     --font-size-1rem: 1rem;
     --font-size-1-1rem: 1.1rem;
     --font-size-1-2rem: 1.2rem;
@@ -88,6 +89,12 @@ p {
     p {
         font-size: 0.9rem;
     }
+}
+
+/* Text mod */
+.text--mod {
+    color: var(--secondary-color);
+    font-style: oblique;
 }
 
 /* BUTTON STYLES */
@@ -634,7 +641,7 @@ p {
 }
 
 .about__title {
-    padding-top: var(--padding-60);
+    padding-top: var(--padding-30);
 }
 
 .about .about__content .about__text {
@@ -647,31 +654,127 @@ p {
 }
 /* ============***End of About styles***============ */
 
-/* ============***Beginning of Pricing Section styles***============ */
-.pricing {
-    color: var(--primary-color);
-    background-color: var(--light-text-color);
-}
-
-
-
-/* ============***End of Pricing styles***============ */
-
 /* ============***Beginning of Classes Section styles***============ */
 .classes {
-    color: var(--light-text-color);
-    background-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: var(--light-text-color);
+    padding-bottom: var(--padding-60);
 }
 
+.classes__content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* flex-wrap: wrap; */
+    font-size: 1.4rem;
+    width: 100%;
+    width: -webkit-fill-available;
+}
 
+@media screen and (max-width: 1097px) {
+    .classes__content {
+        flex-direction: column;
+    }
+}
 
+.classes__content details {
+    width: 33.3%;
+    padding: var(--padding-30);
+    box-shadow: 1px 1px 5px 1px #606060;
+}
+@media screen and (max-width: 1097px) {
+    .classes__content details {
+        width: 100%;
+        padding: var(--padding-30);
+    }
+}
+
+.classes__content details[open] summary {
+    color: var(--tertiary-color);
+}
+
+.classes__content details > summary::marker {
+    font-size: 2rem;
+}
+
+.classes__content p{
+    font-size: 1.1rem;
+    width: auto;
+    color: var(--primary-color);
+    padding: var(--padding-30) 0;
+    text-align: left;
+}
 /* ============***End of Classes styles***============ */
+
+/* ============***Beginning of Pricing Section styles***============ */
+.pricing {
+    color: var(--light-text-color);
+    background-color: var(--primary-color);
+    padding-bottom: var(--padding-30);
+}
+
+.pricing__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 5px;
+    width: 100%;
+}
+
+@media screen and (max-width: 1164px) {
+    .pricing__content {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        text-align: center;
+        grid-row-gap: 30px;
+    }
+}
+
+.pricing__content .card {
+    background-color: var(--primary-color);
+    font-size: 1.2rem;
+    box-shadow: 2px 2px 4px 1px #dadada;
+}
+
+.pricing__content .card .card-header{
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1430px) {
+    .pricing__content .card {
+        font-size: .9rem;
+    }
+}
+
+@media screen and (max-width: 1164px) {
+    .pricing__content .card {
+        font-size: 1.05rem;
+    }
+}
+
+.pricing__content .card ul li{
+    background-color: var(--primary-color);
+    border: none;
+}
+
+.pricing__button {
+    text-align: center;
+    margin: 50px 0 20px 0;
+}
+
+.pricing__button a {
+    color: var(--light-text-color);
+    animation: beat .45s infinite alternate;
+	transform-origin: center;
+}
+
+/* ============***End of Pricing styles***============ */
 
 /* ============***Beginning of Blog Section styles***============ */
 .blog {
     color: var(--primary-color);
     background-color: var(--light-text-color);
     padding-bottom: var(--padding-60);
+    padding-top: var(--padding-30) !important;
 }
 .blog__desc {
     color: var(--primary-color);
@@ -846,6 +949,7 @@ p {
   }
 /* ============***End of Contact styles***============ */
 /* Key Frames Animations */
+/* Logo Fill */
 @keyframes logo-animation {
     to {
         stroke-dashoffset: 0;
@@ -860,4 +964,10 @@ p {
     to {
         fill: var(--secondary-color);
     }
+}
+
+/* Heatbeat */
+/* Heart beat animation */
+@keyframes beat{
+	to { transform: scale(1.2); }
 }
