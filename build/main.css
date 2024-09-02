@@ -948,6 +948,16 @@ p {
     }
   }
 /* ============***End of Contact styles***============ */
+
+/* ============***Beginning of Footer Section styles***============ */
+  .footer {
+    width: 100%;
+    padding: var(--padding-60) 0;
+    background-color: var(--tertiary-color);
+    text-align: center;
+    font-size: 1rem;
+  }
+/* ============***End of Footer styles***============ */
 /* Key Frames Animations */
 /* Logo Fill */
 @keyframes logo-animation {
