@@ -99,7 +99,7 @@ p {
 /* Text mod */
 .text--mod {
     color: var(--secondary-color);
-    padding: 2px 10px;
+    padding: 2px 6px;
     background-color: #fff4f060;
     font-style: oblique;
 }
