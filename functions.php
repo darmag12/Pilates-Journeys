@@ -10,7 +10,7 @@ function pilatesjourneys_files() {
     wp_enqueue_script('pilatesjourneys_font_awesome', '//kit.fontawesome.com/3ea00495fc.js');
     wp_enqueue_script('pilatesjourneys_popper_js', '//cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js');
     wp_enqueue_script('pilatesjourneys_bootstrap_min_js', '//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js');
-    wp_enqueue_script('pilatesjourneys_map_js', get_theme_file_uri('/vendor/map.js'));
+    wp_enqueue_script('pilatesjourneys_map_js', get_theme_file_uri('/build/map.js'));
     wp_enqueue_script('pilatesjourneys_main_js', get_theme_file_uri('/build/main.js'), array('pilatesjourneys_map_js'));
 }
 

@@ -157,38 +157,6 @@
           </div>
         </div>
         <?php } wp_reset_postdata(); ?>
-      <!-- <div class="blog__post">
-        <div class="postimg__container">
-          <a href="" title="Post 1 Headline">
-            <img class="post__img" src="<?php echo get_theme_file_uri('/resources/blog-placeholder-one.jpg'); ?>" alt="Post 1 Headline" />
-          </a>
-        </div>
-        <div class="post__content">
-          <span class="post__date">Tue Aug 27 2024 | Category</span>
-          <h5 class="post__title">Post 1 Headline</h5>
-          <p class="post__desc">
-            Lorem ipsum odor amet, consectetuer adipiscing elit. Ipsum non etiam odio nulla dignissim cras porta...
-          </p>
-          <a class="post__readmore" href="" title="Link to the entire post">Read More</a>
-        </div>
-      </div> -->
-      <!-- End Blog Post one -->
-      <!-- Begin Blog Post two -->
-      <!-- <div class="blog__post">
-        <div class="postimg__container">
-          <a href="" title="Post 2 Headline">
-            <img class="post__img" src="<?php echo get_theme_file_uri('/resources/blog-placeholder-two.jpg'); ?>" alt="Post 2 Headline" />
-          </a>
-        </div>
-        <div class="post__content">
-          <span class="post__date">Mon Aug 26 2024 | Category</span>
-          <h5 class="post__title">Post 2 Headline</h5>
-          <p class="post__desc">
-            Lectus suspendisse class amet; orci amet cursus. Phasellus sapien sociosqu velit aptent ex taciti...
-          </p>
-          <a class="post__readmore" href="" title="Link to the entire post">Read More</a>
-        </div>
-      </div> -->
     </div>
     <!-- End Blog Post two -->
     <div class="blog__moreblogs">
