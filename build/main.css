@@ -690,7 +690,7 @@ p {
 
 @media screen and (max-width: 1097px) {
     .classes__content {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 }
 

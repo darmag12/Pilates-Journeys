@@ -5,21 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pilates Journeys</title>
-  <link rel="stylesheet" href="vendor/normalize.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <script src="https://kit.fontawesome.com/3ea00495fc.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="build/main.css">
+  <?php wp_head();?>
 </head>
 
 <body>
   <header class="header">
     <div class="header__top">
       <!-- Logo Starts Here -->
-      <a class="prevent-default-style-logo" href="https://darmag12.github.io/Pilates-Journeys/">
+      <a class="prevent-default-style-logo" href="<?php echo site_url(); ?>">
         <div id="logo-pilates" class="logo-pilates">
-          <!-- <?php echo file_get_contents("./resources/pilates-journey-logo.svg"); ?> -->
-          <svg width="250" height="200" viewBox="0 0 475 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <?php include get_stylesheet_directory() . "/resources/pilates-journey-logo.svg"; ?> 
+          <!-- <svg width="250" height="200" viewBox="0 0 475 450" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M395.693 381.85L395.696 381.853C397.027 383.124 397.631 384.444 397.657 385.834C397.678 387.228 397.124 388.572 395.853 389.895L395.85 389.897C394.576 391.232 393.253 391.846 391.862 391.88C390.471 391.914 389.119 391.366 387.786 390.095C386.467 388.826 385.858 387.494 385.823 386.087C385.799 384.697 386.356 383.343 387.629 382.009C388.899 380.687 390.222 380.081 391.616 380.046C393.018 380.021 394.371 380.58 395.693 381.85Z"
               stroke="#9C6769" stroke-width="2" />
@@ -96,7 +92,7 @@
             <path
               d="M145.3 19.723L145.315 19.7211L145.33 19.7188C146.64 19.5101 147.843 19.4022 148.942 19.3912L148.964 19.391L148.987 19.3898C150.13 19.3266 151.078 19.3461 151.842 19.4384L151.852 19.4397L151.863 19.4408C152.162 19.4706 152.422 19.5003 152.644 19.5294L151.902 23.7307C151.256 23.6346 150.454 23.5585 149.503 23.4998C148.496 23.4376 147.429 23.4473 146.303 23.5265C145.136 23.6086 144.047 23.8254 143.041 24.1849C141.463 24.7488 140.172 25.6326 139.214 26.8533L139.209 26.86L139.203 26.8669C138.176 28.222 138.039 29.8201 138.64 31.5029C139.356 33.5057 140.622 34.9832 142.443 35.8453L142.451 35.8491L142.459 35.8527C144.176 36.6288 146.494 37.0217 149.34 37.0964C151.107 37.1624 152.701 37.3288 154.123 37.5918L154.142 37.5953L154.161 37.598C155.575 37.8047 156.821 38.1858 157.909 38.7306C158.981 39.2673 159.899 39.9955 160.67 40.9212L160.679 40.9323L160.689 40.9432C161.482 41.8409 162.172 43.059 162.735 44.6345C163.227 46.01 163.443 47.4701 163.378 49.0235L163.378 49.0352L163.377 49.0469C163.35 50.5612 163.001 52.0311 162.322 53.4647C161.674 54.834 160.699 56.1356 159.376 57.3658C158.07 58.5271 156.393 59.4875 154.318 60.2293C152.84 60.7575 151.393 61.1036 149.976 61.2724C148.517 61.4462 147.167 61.5396 145.926 61.5543C144.703 61.5157 143.626 61.4299 142.692 61.2994C142.227 61.2246 141.822 61.1571 141.476 61.0969L141.848 56.7306L142.06 56.7657C142.946 56.912 143.997 57.0388 145.211 57.1473C146.445 57.2576 147.721 57.305 149.041 57.2902C150.394 57.275 151.573 57.1121 152.544 56.765C154.78 55.9661 156.431 54.7579 157.247 53.0337C158.051 51.3363 158.007 49.423 157.279 47.3873C156.935 46.4238 156.467 45.5957 155.852 44.9402C155.243 44.267 154.527 43.75 153.707 43.4014C152.923 43.0681 152.052 42.8595 151.103 42.7624C150.211 42.6166 149.235 42.5291 148.18 42.4973C146.162 42.3833 144.327 42.2074 142.673 41.9705C141.102 41.726 139.705 41.324 138.473 40.7726C137.248 40.1913 136.212 39.4312 135.355 38.4939C134.496 37.5311 133.761 36.2429 133.172 34.5947C132.699 33.2724 132.548 31.951 132.709 30.6187L132.709 30.6187L132.71 30.6066C132.862 29.2126 133.286 27.9065 133.986 26.6801L133.991 26.6713L133.996 26.6624C134.683 25.4019 135.645 24.2544 136.901 23.2225L136.909 23.2153L136.918 23.208C138.144 22.1528 139.629 21.3064 141.386 20.6782C142.707 20.206 144.012 19.8887 145.3 19.723Z"
               stroke="#9C6769" stroke-width="2" />
-          </svg>
+          </svg> -->
         </div>
       </a>
       <!-- Top Navigation Starts Here -->
@@ -104,7 +100,7 @@
         <!-- Button to close the overlay navigation -->
         <a href="javascript:void(0)" class="closebtn" data-closeNav>&times;</a>
         <nav class="topnav overlay-content" data-navItemsContainer>
-          <a class="topnav__link" href="https://darmag12.github.io/Pilates-Journeys/">Home</a>
+          <a class="topnav__link" href="<?php echo site_url(); ?>">Home</a>
           <a class="topnav__link" href="#about">About</a>
           <a class="topnav__link" href="#classes">Classes</a>
           <a class="topnav__link" href="#pricing">Pricing</a>
@@ -154,7 +150,7 @@
           you.</p>
       </div>
       <div class="about__img">
-        <img src="resources/pj-about-me.jpg" alt="about me photo" />
+        <img src="<?php echo get_theme_file_uri('/resources/pj-about-me.jpg'); ?>" alt="about me photo" />
       </div>
     </div>
   </section>
@@ -251,7 +247,7 @@
       <div class="blog__post">
         <div class="postimg__container">
           <a href="" title="Post 1 Headline">
-            <img class="post__img" src="./resources/blog-placeholder-one.jpg" alt="Post 1 Headline" />
+            <img class="post__img" src="<?php echo get_theme_file_uri('/resources/blog-placeholder-one.jpg'); ?>" alt="Post 1 Headline" />
           </a>
         </div>
         <div class="post__content">
@@ -268,7 +264,7 @@
       <div class="blog__post">
         <div class="postimg__container">
           <a href="" title="Post 2 Headline">
-            <img class="post__img" src="./resources/blog-placeholder-two.jpg" alt="Post 2 Headline" />
+            <img class="post__img" src="<?php echo get_theme_file_uri('/resources/blog-placeholder-two.jpg'); ?>" alt="Post 2 Headline" />
           </a>
         </div>
         <div class="post__content">
@@ -392,18 +388,20 @@
         <strong class="footer__copyright--coloredlink">Pilates Journeys</strong></span>
     </div>
   </footer>
-  <!-- End of Contact Section -->
-  <!-- JS SCRIPTS -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
   <!-- Map Script -->
-  <script src="./vendor/maps.js"></script>
-  <!-- End of Map Script -->
-  <script src="./build/main.js"></script>
+   <?php
+    // Map API Key
+    $api_key = "AIzaSyChehKwEK5YM_enKaCyPgOlZNf98_KHxOI";
+   ?>
+   <script>
+        (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
+        key: "AIzaSyChehKwEK5YM_enKaCyPgOlZNf98_KHxOI",
+        v: "weekly",
+        // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+        // Add other bootstrap parameters as needed, using camel case.
+        });
+   </script>
+  <?php wp_footer(); ?>
 </body>
 
 </html>
