@@ -40,13 +40,6 @@ a:active {
     font-size: var(--font-size-1-1rem);
 }
 
-a.prevent-default-style-logo:active,
-a.prevent-default-style-logo:visited {
-    text-decoration: none;
-    color: var(--secondary-color);
-    cursor: pointer;
-}
-
 section {
     padding-top: var(--padding-60);
     /* padding-bottom: var(--padding-60); */
@@ -242,7 +235,7 @@ p {
     min-height: 100vh;
     position: relative;
     z-index: 9;
-    background: linear-gradient(to bottom, #ddcfa7, #9c67697f, #252831e2 100%),
+    background: linear-gradient(to bottom, #ddcfa7, #fff4f093, #9c6769e3 100%),
         url('../resources/pj-bg-01.jpg') no-repeat;
     background-size: cover;
     object-fit: cover;
@@ -293,13 +286,13 @@ p {
 }
 
 .header__middle h1 {
-    color: var(--light-text-color);
+    color: var(--secondary-color);
     text-transform: uppercase;
 }
 
 .header__middle p {
     font-style: italic;
-    color: var(--dark-text-color);
+    color: var(--secondary-color);
     font-size: 1.3rem;
 }
 
@@ -307,6 +300,11 @@ p {
     .header__middle p {
         font-size: 1.1rem;
     }
+}
+
+.button.cta--animation {
+    animation: beat .6s infinite alternate;
+	transform-origin: center;
 }
 /* ============***Logo styles***============ */
 .logo-pilates {
@@ -667,11 +665,73 @@ p {
 }
 /* ============***End of About styles***============ */
 
-/* ============***Beginning of Classes Section styles***============ */
-.classes {
+/* ============***Beginning of Pricing Section styles***============ */
+.pricing {
     color: var(--primary-color);
     background-color: var(--secondary-color);
     padding-bottom: var(--padding-60);
+}
+
+.pricing__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 5px;
+    width: 100%;
+}
+
+@media screen and (max-width: 1164px) {
+    .pricing__content {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        text-align: center;
+        grid-row-gap: 30px;
+    }
+}
+
+.pricing__content .card {
+    background-color: var(--secondary-color);
+    font-size: 1.2rem;
+    box-shadow: 2px 2px 4px 1px #dadada;
+}
+
+.pricing__content .card .card-header{
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 1430px) {
+    .pricing__content .card {
+        font-size: .9rem;
+    }
+}
+
+@media screen and (max-width: 1164px) {
+    .pricing__content .card {
+        font-size: 1.05rem;
+    }
+}
+
+.pricing__content .card ul li{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    text-transform: capitalize;
+}
+
+/* ============***End of Pricing styles***============ */
+
+/* ============***Beginning of Classes Section styles***============ */
+.classes {
+    color: var(--light-primary-color);
+    background-color: var(--primary-color);
+    padding-bottom: var(--padding-60);
+}
+
+.classes .classes__title {
+    color: var(--light-text-color);
 }
 
 .classes__content {
@@ -690,7 +750,7 @@ p {
     }
 }
 
-.classes__content details {
+/* .classes__content details {
     width: 33.3%;
     padding: var(--padding-30);
     box-shadow: 1px 1px 5px 1px var(--primary-color);
@@ -713,74 +773,11 @@ p {
 .classes__content p{
     font-size: 1.1rem;
     width: auto;
-    color: var(--primary-color);
+    color: var(--light-text-color);
     padding: var(--padding-30) 0;
     text-align: left;
-}
+} */
 /* ============***End of Classes styles***============ */
-
-/* ============***Beginning of Pricing Section styles***============ */
-.pricing {
-    color: var(--light-text-color);
-    background-color: var(--primary-color);
-    padding-bottom: var(--padding-30);
-}
-
-.pricing__content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 5px;
-    width: 100%;
-}
-
-@media screen and (max-width: 1164px) {
-    .pricing__content {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        text-align: center;
-        grid-row-gap: 30px;
-    }
-}
-
-.pricing__content .card {
-    background-color: var(--primary-color);
-    font-size: 1.2rem;
-    box-shadow: 2px 2px 4px 1px #dadada;
-}
-
-.pricing__content .card .card-header{
-    font-size: 1.2rem;
-}
-
-@media screen and (max-width: 1430px) {
-    .pricing__content .card {
-        font-size: .9rem;
-    }
-}
-
-@media screen and (max-width: 1164px) {
-    .pricing__content .card {
-        font-size: 1.05rem;
-    }
-}
-
-.pricing__content .card ul li{
-    background-color: var(--primary-color);
-    border: none;
-}
-
-.pricing__button {
-    text-align: center;
-    margin: 50px 0 20px 0;
-}
-
-.pricing__button a {
-    color: var(--light-text-color);
-    animation: beat .45s infinite alternate;
-	transform-origin: center;
-}
-
-/* ============***End of Pricing styles***============ */
 
 /* ============***Beginning of Blog Section styles***============ */
 .blog {
@@ -1037,5 +1034,5 @@ p {
 /* Heatbeat */
 /* Heart beat animation */
 @keyframes beat{
-	to { transform: scale(1.2); }
+	to { transform: scale(1.1); }
 }
