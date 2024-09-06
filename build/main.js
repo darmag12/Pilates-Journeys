@@ -1,11 +1,11 @@
 "use strict";
-(function () {
+window.addEventListener('DOMContentLoaded', ()=> {
     //  Assign variables to dom elements
     const openNav = document.querySelector("[data-openNav]");
     const closeNav = document.querySelector("[data-closeNav]");
     const navContainer = document.querySelector("[data-navContainer]");
     const navItemsContainer = document.querySelector("[data-navItemsContainer]");
-    const details = document.querySelectorAll("details");
+    const navItems = document.querySelectorAll('.topnav .topnav__link');
     let map;
 
     // set nav container width to 100%
@@ -21,9 +21,13 @@
     }
 
     // Attatched eventlisteners
-    openNav.addEventListener("click", openNavigation);
-    closeNav.addEventListener("click", closeNavigation);
-
+    if (openNav) openNav.addEventListener("click", openNavigation);
+    if (closeNav) closeNav.addEventListener("click", closeNavigation);
+    if (window.innerWidth <= '1030'){
+        navItems.forEach(navItem => {
+            navItem.addEventListener('click', closeNavigation)
+        })
+    }
     // Initialize Google Maps
     // Initialize and add the map
     async function initMap() {
@@ -58,4 +62,4 @@
 
 initMap();
     
-})()
+});
